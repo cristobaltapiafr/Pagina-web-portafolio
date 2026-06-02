@@ -1,0 +1,85 @@
+/* ─────────────────────────────────────────────
+   AboutSection.module.css
+───────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Bio ────────────────────────────────────── */
+.para {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  transition: color 0.35s ease;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.infoLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color 0.35s ease;
+}
+
+.infoValue {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: color 0.35s ease;
+}
+
+/* ── Barras de habilidades ───────────────────── */
+.skillBar { margin-bottom: 20px; }
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: color 0.35s ease;
+}
+
+.skillPct {
+  color: var(--accent);
+  transition: color 0.35s ease;
+}
+
+.skillTrack {
+  height: 6px;
+  background: var(--skill-track);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: background 0.35s ease;
+}
+
+.skillFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  border-radius: 3px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s ease;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}

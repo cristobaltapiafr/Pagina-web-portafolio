@@ -1,0 +1,106 @@
+/* ─────────────────────────────────────────────
+   HeroSection.module.css
+───────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Fondo ───────────────────────────────────── */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  animation: slowZoom 20s ease-in-out infinite alternate;
+  filter: var(--hero-brightness);
+  transition: filter 0.35s ease;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1.0); }
+  to   { transform: scale(1.08); }
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+  transition: background 0.35s ease;
+}
+
+/* ── Contenido ───────────────────────────────── */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.heroName {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: #fff;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.heroRole {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  color: var(--text-hero);
+  letter-spacing: 0.02em;
+  animation: fadeUp 1s 0.3s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.heroRole strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--accent);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+  transition: background 0.35s ease;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.heroCta {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  animation: fadeUp 1s 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ── Animaciones ─────────────────────────────── */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
