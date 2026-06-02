@@ -8,7 +8,6 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   title:       "Tu Nombre — Portafolio",
   description: "Portafolio de Desarrollador Full Stack — Santiago, Chile.",
-  lang:        "es",
 };
 
 export default function RootLayout({
