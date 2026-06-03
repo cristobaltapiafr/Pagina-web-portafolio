@@ -13,7 +13,7 @@ import type {
 
 // ── Identidad ─────────────────────────────────
 export const SITE_OWNER = {
-  firstName: "Critóbal",
+  firstName: "Cristóbal",
   lastName:  "Tapia Rojas",
   roles: [
     "Desarrollador Full Stack",
@@ -96,5 +96,5 @@ export const CONTACT_INFO: ContactInfo[] = [
   { icon: "📍", label: "Ubicación", value: "Santiago, Chile" },
   { icon: "✉️", label: "Correo",    value: "cristobaltapia.fr@gmail.com" },
   { icon: "📞", label: "Teléfono",  value: "+56 9 3192 1030" },
-  { icon: "🌐", label: "Sitio Web", value: "Miportafolio" },
+  { icon: "🌐", label: "Sitio Web", value: "Mi portafolio" },
 ];
